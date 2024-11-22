@@ -19,7 +19,7 @@
     "lora_r": 16,
     "gradient_checkpointing": true,
     "torch_dtype": "bfloat16",
-    "attn_implementation": "flash_attention_2"
+    "attn_implementation": "flash_attention_2",
     "learning_rate": 2e-4,
     "line_by_line": true,
 }

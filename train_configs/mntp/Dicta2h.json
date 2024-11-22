@@ -11,7 +11,7 @@
     "data_collator_type": "all_mask",
     "mlm_probability": 0.8,
     "overwrite_output_dir": true,
-    "output_dir": "drive/MyDrive/NLP1_project/mntp6",
+    "output_dir": "drive/MyDrive/NLP1_project/mntp7",
     "evaluation_strategy": "steps",
     "eval_steps": 100,
     "save_steps": 200,

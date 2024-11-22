@@ -304,7 +304,7 @@ class DataTrainingArguments:
         metadata={"help": "Ratio of tokens to mask for masked language modeling loss"},
     )
     line_by_line: bool = field(
-        default=False,
+        default=True,
         metadata={
             "help": "Whether distinct lines of text in the dataset are to be handled as distinct sequences."
         },

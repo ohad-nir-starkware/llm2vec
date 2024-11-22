@@ -948,7 +948,10 @@ def main():
             checkpoint = last_checkpoint
         train_result = trainer.train(resume_from_checkpoint=checkpoint)
         #trainer.save_model("drive/MyDrive/NLP1_project/latest_model_save/curr")  # Saves the tokenizer too for easy upload
-        trainer.save_model(training_args.save_model_dir)
+        #training_args.output_dir
+        #trainer.save_model(training_args.save_model_dir)
+        trainer.save_model(training_args.output_dir) # subfolder?
+        
         metrics = train_result.metrics
 
         max_train_samples = (

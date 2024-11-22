@@ -252,6 +252,10 @@ class DataTrainingArguments:
     """
     Arguments pertaining to what data we are going to input our model for training and eval.
     """
+    save_model_dir: Optional[str] = field(
+        default="drive/MyDrive/NLP1_project/latest_model_save/curr",
+        metadata={"help": "Where to save the final model."},
+    )
 
     dataset_name: Optional[str] = field(
         default=None,
@@ -943,7 +947,8 @@ def main():
         elif last_checkpoint is not None:
             checkpoint = last_checkpoint
         train_result = trainer.train(resume_from_checkpoint=checkpoint)
-        trainer.save_model("drive/MyDrive/NLP1_project/latest_model_save/curr")  # Saves the tokenizer too for easy upload
+        #trainer.save_model("drive/MyDrive/NLP1_project/latest_model_save/curr")  # Saves the tokenizer too for easy upload
+        trainer.save_model(training_args.save_model_dir)
         metrics = train_result.metrics
 
         max_train_samples = (
